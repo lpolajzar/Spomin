@@ -1,15 +1,13 @@
 from tkinter import *
-from random import *
 import random
 from functools import partial
 import time
 
-images=["piratebay.png", "torbrowser.png", "duck.gif", "batman.png",
-        "allstar.png", "peace.png", "dn.png", "owl.png",
-        "bender.png", "btc.png", "kava.gif", "moon.png",
-        "kyle.png", "charizard.png", "stark.gif", "nutella.gif",
-        "pizza.gif", "burek.gif"]
+images=["piratebay", "torbrowser", "duck", "batman", "allstar", "peace",
+        "dn", "owl", "bender", "btc", "kava", "moon",
+        "kyle", "charizard", "stark", "nutella", "pizza", "burek"]
 imgPath = "C:\\Users\\Lucija\\Desktop\\Spomin\\images\\"
+imgFormat = ".gif"
 cards = []
 pics = {}
 
@@ -35,7 +33,7 @@ class Memory(Frame):
         turned = [[False for x in range(6)] for x in range(6)]
         table = [[0 for x in range(6)] for x in range(6)]
         buttons = [[0 for x in range(6)] for x in range(6)]
-        back = PhotoImage(file="C:\\Users\\Lucija\\Desktop\\Spomin\\images\\back.png")
+        back = PhotoImage(file="C:\\Users\\Lucija\\Desktop\\Spomin\\images\\back.gif")
         tocke = [0, 0]
         self.igralec = 0
         self.prejsnja = []
@@ -104,7 +102,7 @@ class Memory(Frame):
             cards.append(images[i])
             cards.append(images[i])
             if not images[i] in pics:
-                pics[images[i]] = PhotoImage(file=imgPath + images[i])
+                pics[images[i]] = PhotoImage(file=imgPath + images[i] + imgFormat)
 
         for i in range(6):
             for j in range(6):
