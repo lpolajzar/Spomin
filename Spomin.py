@@ -6,7 +6,7 @@ import time
 images=["piratebay", "torbrowser", "duck", "batman", "allstar", "peace",
         "dn", "owl", "bender", "btc", "kava", "moon",
         "kyle", "charizard", "stark", "nutella", "pizza", "burek"]
-imgPath = "C:\\Users\\Lucija\\Desktop\\Spomin\\images\\"
+imgPath = "./images/"
 imgFormat = ".gif"
 cards = []
 pics = {}
@@ -33,7 +33,7 @@ class Memory(Frame):
         turned = [[False for x in range(6)] for x in range(6)]
         table = [[0 for x in range(6)] for x in range(6)]
         buttons = [[0 for x in range(6)] for x in range(6)]
-        back = PhotoImage(file="C:\\Users\\Lucija\\Desktop\\Spomin\\images\\back.gif")
+        back = PhotoImage(file="./images/back.gif")
         tocke = [0, 0]
         self.igralec = 0
         self.prejsnja = []
