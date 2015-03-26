@@ -1,2 +1,3 @@
-# Spomin
-Spomin je igra s kartami, kjer so karte obrnjene navzdol. Kdor je na vrsti obrne dve karti in poskuša najti par ujemajočih kart. Igra se konča ko zmanjka kart. Zmaga tisti, ki je našel več parov.
+V repozitoriju se nahaja datoteka Spomin.py, preko katere zaženemo igrico in mapa Images, kjer so shranjene vse slike. 
+
+Igra deluje tako, da poženemo Spomin.py. Odpre se nam novo okno, kjer izberemo, ali bomo igrali proti računalniu ali igro za dva igralca.
