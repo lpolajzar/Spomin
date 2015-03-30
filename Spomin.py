@@ -90,10 +90,12 @@ class Memory(Frame):
     def callback(self, i, j):
         self.turned[i][j] = not self.turned[i][j]
         if self.turned[i][j]:
-            self.buttons[i][j].config(image=pics[self.table[i][j]], state=DISABLED)
+            self.buttons[i][j].config(image=pics[self.table[i][j]])
             if len(self.prejsnja) > 0:
                 if self.table[i][j] == self.table[self.prejsnja[0]][self.prejsnja[1]]:
                     self.tocke[self.igralec] = self.tocke[self.igralec] + 1
+                    self.buttons[i][j].config(image=pics[self.table[i][j]], state=DISABLED)
+                    self.buttons[self.prejsnja[0]][self.prejsnja[1]].config(image=pics[self.table[i][j]], state=DISABLED)
                     if self.igralec == 0:
                         self.pozitivnaGlobina(self.table[i][j])
                     self.prejsnja = []
@@ -205,7 +207,7 @@ class Memory(Frame):
       
         self.parent.title("Spomin")
         self.pack(fill=BOTH, expand=1)
-        self.globinaClovek = 4
+        self.globinaClovek = 12
 
         self.nova_igra_racunalnik()
 
@@ -271,7 +273,6 @@ class Memory(Frame):
 def main():
   
     root = Tk()
-    root.geometry("546x576")
     app = Memory(root)
     root.mainloop()
 
