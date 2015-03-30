@@ -51,7 +51,7 @@ class Memory(Frame):
                 return
 
     def negativnaGlobina(self, karta):
-        print(karta)
+        # print(karta)
         pari = []
         for i in range(len(self.odkrite[0])-1, len(self.odkrite[0]) - self.globinaClovek - 1, -1):
             if self.odkrite[0][i] == karta and [self.odkrite[1][i], self.odkrite[2][i]] not in pari:
@@ -59,9 +59,9 @@ class Memory(Frame):
             if len(pari) == 2:
                 self.globinaClovek += len(self.odkrite[0]) - i - 1
                 self.globinaClovek = int(self.globinaClovek/2)
-                print(self.globinaClovek)
-                print(len(self.odkrite[0]))
-                print(i)
+                # print(self.globinaClovek)
+                # print(len(self.odkrite[0]))
+                # print(i)
                 return
 
     def odkritiPari(self):
@@ -142,9 +142,9 @@ class Memory(Frame):
         else:
             self.buttons[i][j].config(image=self.back)
 
-        print('')
-        print(str(i)+" "+str(j) + " " + self.table[i][j] + " igralec: " + str(self.igralec) + " globina " + str(self.globinaClovek))
-        print(self.odkrite)
+        # print('')
+        # print(str(i)+" "+str(j) + " " + self.table[i][j] + " igralec: " + str(self.igralec) + " globina " + str(self.globinaClovek))
+        # print(self.odkrite)
         if len(self.prejsnja) == 0 and self.racunalnik and self.igralec == 1 and self.tocke[0] + self.tocke[1] < 18:
             self.igraRacunalnik()
         
